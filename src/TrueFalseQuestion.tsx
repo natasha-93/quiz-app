@@ -2,6 +2,7 @@ import * as React from "react";
 import { ITrueFalseQuestion } from "./models/Question";
 import { IAnswer } from "./models/Answer";
 import Answer from "./Answer";
+import styles from "./Question.module.css";
 
 export interface TrueFalseQuestionProps {
   selectedAnswer: IAnswer | null;
@@ -24,8 +25,11 @@ const TrueFalseQuestion: React.SFC<TrueFalseQuestionProps> = ({
   ];
   return (
     <>
-      <div dangerouslySetInnerHTML={{ __html: question.question }} />
-      <ul>
+      <h1
+        className={styles.question}
+        dangerouslySetInnerHTML={{ __html: question.question }}
+      />
+      <ul className={styles.answers}>
         {answers.map((answer, index) => (
           <Answer
             key={index}

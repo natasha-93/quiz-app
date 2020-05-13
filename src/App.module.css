@@ -1,9 +1,14 @@
 .app {
   margin: auto;
-  max-width: 30rem;
+  width: 30rem;
+  min-height: 30rem;
   background-color: white;
   box-shadow: 4px 4px 32px -8px rgba(0, 0, 0, 0.71);
   padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
 }
 
 .loading {
@@ -19,6 +24,7 @@
 .score {
   font-size: 1rem;
   padding-top: 1rem;
+  text-align: center;
 }
 
 .nextButton {

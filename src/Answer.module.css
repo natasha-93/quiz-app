@@ -1,17 +1,20 @@
 .answer {
   list-style: none;
   background-color: none;
-  max-width: 15rem;
+  width: 100%;
   padding: 1rem;
-  border-radius: 1rem;
+  border-radius: 3rem;
+  border: 1px solid grey;
+  margin: 0.5rem 0;
+  font-weight: bold;
 }
 
 .correct.answer {
-  background-color: green;
+  background-color: rgb(16, 201, 99);
   color: white;
 }
 
 .incorrect.answer {
-  background-color: red;
+  background-color: rgb(250, 102, 114);
   color: white;
 }

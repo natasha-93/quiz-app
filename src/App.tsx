@@ -5,6 +5,8 @@ import TrueFalseQuestion from "./TrueFalseQuestion";
 import { IAnswer } from "./models/Answer";
 import { Category } from "./models/Category";
 import styles from "./App.module.css";
+import { css } from "@emotion/core";
+import CircleLoader from "react-spinners/CircleLoader";
 
 function App() {
   const [questions, setQuestions] = useState<Question[] | null>();
@@ -34,10 +36,14 @@ function App() {
       });
   }, []);
 
+  const override = css`
+    margin: 0 auto;
+  `;
+
   return (
     <div className={styles.app}>
       {(loading || questions == null) && (
-        <div className={styles.loading}>Loading...</div>
+        <CircleLoader css={override} color={"#f68084"} />
       )}
 
       {question != null && (
