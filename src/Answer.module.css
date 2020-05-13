@@ -1,0 +1,17 @@
+.answer {
+  list-style: none;
+  background-color: none;
+  max-width: 15rem;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.correct.answer {
+  background-color: green;
+  color: white;
+}
+
+.incorrect.answer {
+  background-color: red;
+  color: white;
+}
